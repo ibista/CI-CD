@@ -1,0 +1,33 @@
+// ✅ Step 1: Basic Redux Setup (✅ You did this)
+// Create action types
+
+// Write reducer (increment, decrement)
+
+// Setup store
+
+// Use Provider to wrap the app
+
+// Use useSelector and useDispatch in components
+
+// ✅ Step 2: Add Payloads and Custom Actions (✅ You added set/reset)
+// Create actions with payloads (SET, RESET)
+
+// Dispatch actions with values (like setting state to 50)
+
+// Explain why payload is useful for dynamic values (not hardcoded +5, -1)
+
+// 🔜 Step 3: Fetch Data from an API (our next step)
+// Install redux-thunk
+
+// Write async action to fetch data (e.g., from JSONPlaceholder)
+
+// Dispatch loading, success, and error actions
+
+// Handle async state in reducer
+
+// Display data in component using useSelector
+
+// ⏭️ Step 4 (Optional next): Refactor with Redux Toolkit
+// Use createSlice, createAsyncThunk
+
+// Cleaner syntax, less boilerplate
