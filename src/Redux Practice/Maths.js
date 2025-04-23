@@ -1,8 +1,8 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import productReducer from './productReducer'
-import counterReducer from './counterReducer'
+// import productReducer from './productReducer'
+// import counterReducer from './counterReducer'
 import fetchValueFromAPI from './fetchValueFromAPI'
 
 const Maths = () => {

@@ -1,10 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import React, {Suspense} from 'react';
 import Maths from './Redux Practice/Maths';
-import usingRef from './useRef/usingRef';
 
-const MyComponent = React.lazy(() => import('./MyComponent'))
+// const MyComponent = React.lazy(() => import('./MyComponent'))
 
 function App() {
   return (
