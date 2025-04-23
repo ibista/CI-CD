@@ -1,0 +1,42 @@
+name: Frontend CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint code
+        run: |
+          if [ -f package.json ] && grep -q '"lint"' package.json; then
+            npm run lint
+          else
+            echo "⚠️ No lint script found, skipping lint step"
+          fi
+
+      - name: Run tests
+        run: |
+          if [ -f package.json ] && grep -q '"test"' package.json; then
+            npm test -- --watchAll=false
+          else
+            echo "⚠️ No test script found, skipping test step"
+          fi
+
+      - name: Build app
+        run: npm run build
