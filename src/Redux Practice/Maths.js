@@ -52,6 +52,7 @@ const Maths = () => {
       <button onClick = {handleReset}>Reset</button>
       <button onClick = {setValue}>Set 50</button>
       <button onClick = {() => dispatch(handleFetch())}>Fetch Values</button>
+      <button>🚀 Let’s test CI</button>
 
       <div>
     <h1>Counter: {counterState} </h1>
