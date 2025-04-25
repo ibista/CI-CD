@@ -11,7 +11,6 @@ function App() {
       <Suspense fallback={<div>loading....</div>}>
       {/* <MyComponent /> */}
       <Maths />
-      <usingRef />
       </Suspense>
     </div>
   );

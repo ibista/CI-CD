@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.4
@@ -26,8 +26,8 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ec2-user@3.133.149.131 << 'EOF'
             cd /home/ec2-user/app
-            docker build -t react-cd-app .
             docker stop react-cd || true
             docker rm react-cd || true
+            docker build -t react-cd-app .
             docker run -d -p 80:80 --name react-cd react-cd-app
           EOF
